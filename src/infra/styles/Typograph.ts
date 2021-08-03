@@ -14,7 +14,8 @@ export const SubTitle = styled.h2<SubTitleProps>`
         content: '';
         display: block;
         background-color: ${({theme}) => theme.primary};
-        width: 50%;
+        width: 55%;
         height: 1px;
+        margin-top: -1%;
     }
 `
