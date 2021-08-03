@@ -1,8 +1,4 @@
-import { useContext, useEffect } from 'react'
-import { ThemeProvider } from 'styled-components'
-import AppContext, { Context, Theme } from 'src/context/Theme'
-import GlobalStyle from '../src/globalStyle'
-import { dark,light } from '../src/themes'
+import AppContext from 'src/context/Theme'
 import Root from '../src/root'
 
 export default function App({ Component, pageProps }) {
