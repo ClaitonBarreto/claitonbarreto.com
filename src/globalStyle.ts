@@ -14,6 +14,6 @@ export default createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
-    transition: all .3s;
+    transition: all .2s;
   }
 `
