@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Photo = styled.img`
-    width: 16%;
+    width: 14%;
     border-radius: 100%;
     transition: all .2s;
     

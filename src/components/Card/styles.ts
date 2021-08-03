@@ -12,7 +12,7 @@ export const CardContainer = styled.div`
 
     :hover {
         border: 1px solid ${({theme}) => theme.primary};
-        box-shadow: 1px 2px 2px #bbb;
+        box-shadow: 1px 2px 2px ${({theme}) => theme.shadow};
     }
 `
 

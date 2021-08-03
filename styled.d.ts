@@ -6,5 +6,6 @@ declare module 'styled-components' {
         text:string
         primary:string,
         negative:string,
+        shadow:string,
     }
 }
