@@ -8,7 +8,7 @@ const ThemeSwitcher = (props) => {
 
     return (
         <S.Switcher onClick={() => toggleTheme(theme === Theme.light ? Theme.dark : Theme.light)}>
-            <S.Toggler />
+            <S.Toggler currentTheme={theme}/>
         </S.Switcher>
     )
 
