@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components"
 import GlobalStyle from "src/globalStyle"
 import { useTheme } from "src/context/Theme"
 import {Theme} from "src/context/Theme"
-import { dark, light } from '../src/themes'
+import { dark, light } from 'src/themes'
 import ThemeSwitcher from "src/components/ThemeSwitcher"
 
 

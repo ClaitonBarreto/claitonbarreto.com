@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components'
 import AppContext, { Context, Theme } from 'src/context/Theme'
 import GlobalStyle from '../src/globalStyle'
 import { dark,light } from '../src/themes'
-import Root from './_root'
+import Root from '../src/root'
 
 export default function App({ Component, pageProps }) {
 
