@@ -8,8 +8,8 @@ interface AboutTextProps {
 const AboutText = ({text}: AboutTextProps) => {
 
     return(
-        <Flex align="flex-start">
-            <Text p="3rem 0">{text}</Text>
+        <Flex align="flex-start" p="0 10rem">
+            <Text p="3rem 22%" color="#333">{text}</Text>
         </Flex>
     )
 

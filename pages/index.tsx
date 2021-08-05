@@ -24,10 +24,12 @@ export default function Home() {
           <Card 
             title="Sobre mim"
             content="Não espere aqueles textos de currículos, clica pra saber mais sobre mim"
+            link="about"
           />
           <Card 
             title="Minhas skills"
             content="As principais techs em que trabalho hoje"
+            link="about"
           />
         </Flex>
       </Flex>

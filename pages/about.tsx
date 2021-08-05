@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Head from '../src/infra/components/Head'
 import { Flex } from 'src/infra/styles/Container'
 import Profile from 'src/containers/Profile'
-import { GetStaticProps } from 'next'
+import { GetServerSideProps, GetStaticProps } from 'next'
 import client from 'src/apollo-client'
 import { gql } from '@apollo/client'
 import AboutText from 'src/components/AboutText'
@@ -30,7 +30,7 @@ export default function About({ info }) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
     
     const { data } = await client.query({
         query: gql`

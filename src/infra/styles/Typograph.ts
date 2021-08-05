@@ -22,8 +22,10 @@ export const SubTitle = styled.h2<SubTitleProps>`
 
 interface ParagraphProps {
     p?:string
+    color?:string
 }
 
 export const Text = styled.p<ParagraphProps>`
     padding: ${({p}) => p || '0'};
+    color: ${({color}) => color || '#000'};
 `
