@@ -20,7 +20,7 @@ export default function Home() {
         justify="space-beetween"
       >
         <Profile hasSubtitle/>
-        <Flex justify="space-evenly">
+        <Flex justify="center" align="flex-start">
           <Card 
             title="Sobre mim"
             content="Não espere aqueles textos de currículos, clica pra saber mais sobre mim"

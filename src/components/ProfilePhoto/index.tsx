@@ -9,7 +9,7 @@ const ProfilePhoto = () => {
     const { pathname } = useRouter()
 
     const [photoUrl, setPhotoUrl] = useState('')
-    const [photoWidth, setPhotoWidth] = useState('14%')
+    const [photoWidth, setPhotoWidth] = useState('12%')
 
     useEffect(() => {
         (async() => {
@@ -20,7 +20,6 @@ const ProfilePhoto = () => {
     }, [])
 
     useEffect(() => {
-        console.log(pathname)
         if(pathname !== '/')
             setPhotoWidth('10%')
     }, [pathname])
@@ -28,6 +27,7 @@ const ProfilePhoto = () => {
     return (
         <S.Photo 
             src={photoUrl}
+            width={photoWidth}
             photoWidth={photoWidth}
         />
     )

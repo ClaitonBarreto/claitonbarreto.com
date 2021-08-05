@@ -6,6 +6,7 @@ export const CardContainer = styled.div`
     border: 1px solid ${({theme}) => theme.negative};
     border-radius: 1.5rem;
     padding: 2rem 0;
+    margin: 3rem 1.5rem;
     cursor: pointer;
     transition: all .2s;
     color: ${({theme}) => theme.text};
