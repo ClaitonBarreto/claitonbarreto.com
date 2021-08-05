@@ -6,10 +6,22 @@ import { useTheme } from "src/context/Theme"
 import {Theme} from "src/context/Theme"
 import { dark, light } from 'src/themes'
 import ThemeSwitcher from "src/components/ThemeSwitcher"
+import { useEffect } from "react"
+import { gql } from '@apollo/client'
+import client from "./apollo-client"
+import { GetStaticPathsResult, GetStaticProps } from "next"
 
 
+interface RootProps {
+    Component: React.ComponentType<any>
+    pageProps: any
+    infos: any
+}
 
-const Root = ({Component, pageProps}:{Component, pageProps}) => {
+const Root = (props:RootProps) => {
+
+    const { Component, pageProps } = props
+
 
     const { theme } = useTheme()
 

@@ -1,8 +1,11 @@
 import styled from 'styled-components'
 
+interface PhotoProps {
+    photoWidth: string
+}
 
-export const Photo = styled.img`
-    width: 14%;
+export const Photo = styled.img<PhotoProps>`
+    width: ${({ photoWidth }) => photoWidth};
     border-radius: 100%;
     transition: all .2s;
     opacity: .99;

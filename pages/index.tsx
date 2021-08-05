@@ -4,6 +4,7 @@ import Head from '../src/infra/components/Head'
 import { Flex } from 'src/infra/styles/Container'
 import Profile from 'src/containers/Profile'
 import Card from 'src/components/Card'
+import SocialContainer from 'src/containers/Social'
 
 const App = styled.div`
   padding: 2rem;

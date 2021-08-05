@@ -14,8 +14,16 @@ export const SubTitle = styled.h2<SubTitleProps>`
         content: '';
         display: block;
         background-color: ${({theme}) => theme.primary};
-        width: 55%;
+        width: 65%;
         height: 1px;
         margin-top: -1%;
     }
+`
+
+interface ParagraphProps {
+    p?:string
+}
+
+export const Text = styled.p<ParagraphProps>`
+    padding: ${({p}) => p || '0'};
 `
