@@ -34,7 +34,7 @@ const SocialIcon = ({ social, href }:SocialIconProps) => {
 
     return (
         <S.IconWrapper>
-            <a href={href} target="_blank">
+            <a href={href} target="_blank" rel="noreferrer">
                 <Icon />
             </a>
         </S.IconWrapper>
