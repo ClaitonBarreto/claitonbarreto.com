@@ -15,7 +15,7 @@ import { GetStaticPathsResult, GetStaticProps } from "next"
 interface RootProps {
     Component: React.ComponentType<any>
     pageProps: any
-    infos: any
+    infos?: any
 }
 
 const Root = (props:RootProps) => {
