@@ -12,7 +12,6 @@ export const IconWrapper = styled.div`
         width: 2rem;
         height: 2rem;
         position: relative;
-        transition: .2s;
         cursor: pointer;
 
         :hover {

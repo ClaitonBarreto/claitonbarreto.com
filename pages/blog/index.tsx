@@ -7,6 +7,7 @@ import { GetServerSideProps } from 'next'
 import client from 'src/apollo-client'
 import { gql } from '@apollo/client'
 import Markdown from 'src/infra/components/Markdown'
+import Card from 'src/components/Card'
 
 
 const App = styled.div`
@@ -14,7 +15,7 @@ const App = styled.div`
   height: 100vh;
 `
 
-export default function About({ info }) {
+export default function About({ posts }) {
     return (
         <App>  
             <Head title="Home" />
@@ -23,9 +24,13 @@ export default function About({ info }) {
                 justify="space-beetween"
             >
                 <Profile />
-                <Markdown>
-                    {info.content}
-                </Markdown>
+                {posts.map((post) => (
+                    <Card 
+                        title={post.title}
+                        key={post.id}
+                        link={`/blog/${post.slug}`}
+                    />
+                ))}
             </Flex>
         </App>
   )
@@ -35,17 +40,22 @@ export const getServerSideProps: GetServerSideProps = async () => {
     
     const { data } = await client.query({
         query: gql`
-        query {
-            info(filter: {title: {eq: "sobre-mim"}}) {
-                title
-                content
-            }
-        }
+        query 
+            {
+                allPosts(filter:{isActive:{eq:1}}) {
+                  title,
+                  id,
+                  slug
+                }
+     }              
+        
     `})
+
+    console.log(data.allPosts)
 
     return {
         props: {
-            info: data.info
+            posts: data.allPosts
         }
     }
 }

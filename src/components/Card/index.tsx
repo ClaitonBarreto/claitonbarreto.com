@@ -5,21 +5,23 @@ import * as S from './styles'
 
 interface CardProps {
     title:string
-    content:string
-    link:string
+    link?:string
+    content?:string
+    children?: JSX.Element | Element
 }
 
-const Card = ({ content, title, link }: CardProps) => {
+const Card = ({ content, title, link, children }: CardProps) => {
 
     return (
         <S.CardContainer>
-            <Link href={link}>
+            <Link href={link ? link : ''}>
                 <Flex 
                     direction="column"
                     justify="space-beetween"
-                    > 
+                > 
                     <S.CardTitle>{title}</S.CardTitle>
-                    <S.CardContent>{content}</S.CardContent>
+                    {content && <S.CardContent>{content}</S.CardContent>}
+                    {children && <S.CardContent>{children}</S.CardContent>}
                 </Flex>
             </Link>
         </S.CardContainer>

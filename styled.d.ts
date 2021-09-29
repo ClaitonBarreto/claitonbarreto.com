@@ -7,5 +7,7 @@ declare module 'styled-components' {
         primary:string,
         negative:string,
         shadow:string,
+        border:string,
+        absoluteBackground:string,
     }
 }
