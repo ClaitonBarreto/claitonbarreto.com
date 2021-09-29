@@ -136,8 +136,8 @@ export default function About({ post }) {
                     >
                         <div>
                         {tags.map(tag => (
-                            <Tag tag={tag} />
-                            ))}
+                            <Tag tag={tag} key={tag}/>
+                        ))}
                         </div>
                         <h3 id="updatedAt">publicado em {date}</h3>
                     </Flex>
@@ -147,12 +147,14 @@ export default function About({ post }) {
                                 const match = /language-(\w+)/.exec(className || '')
                                 return !inline && match ? (
                                   <SyntaxHighlighter
-                                    children={String(children).replace(/\n$/, '')}
                                     style={codeStyles.a11yDark}
                                     language={match[1]}
                                     PreTag="div"
                                     {...props}
-                                  />
+                                  >
+                                      {String(children).replace(/\n$/, '')}
+                                  </SyntaxHighlighter>
+                                  
                                 ) : (
                                   <code className={className} {...props}>
                                     {children}
