@@ -3,17 +3,26 @@ import styled from 'styled-components'
 export const CardContainer = styled.div`
     width: 20%;
     height: 160px;
-    border: 1px solid ${({theme}) => theme.negative};
+    border: 1px solid ${({theme}) => theme.border};
     border-radius: 1.5rem;
     padding: 2rem 0;
     margin: 3rem 1.5rem;
     cursor: pointer;
-    transition: all .2s;
     color: ${({theme}) => theme.text};
+    background-color: ${({theme}) => theme.absoluteBackground};
 
     :hover {
         border: 1px solid ${({theme}) => theme.primary};
         box-shadow: 1px 2px 2px ${({theme}) => theme.shadow};
+    }
+
+    @media(max-width: 900px) {
+        width: 30%;
+    }
+
+    @media(max-width: 768px) {
+        width: 80%;
+        margin: 1.5rem 0;
     }
 `
 
