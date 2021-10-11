@@ -8,6 +8,7 @@ import client from 'src/apollo-client'
 import { gql } from '@apollo/client'
 import Markdown from 'src/infra/components/Markdown'
 import Card from 'src/components/Card'
+import Menu from 'src/infra/components/Menu'
 
 
 const App = styled.div`
@@ -18,7 +19,8 @@ const App = styled.div`
 export default function About({ posts }) {
     return (
         <App>  
-            <Head title="Home" />
+            <Head title="Posts" />
+            <Menu />
             <Flex 
                 direction="column"
                 justify="space-beetween"

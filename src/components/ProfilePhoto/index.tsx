@@ -9,7 +9,7 @@ const ProfilePhoto = () => {
     const { pathname } = useRouter()
 
     const [photoUrl, setPhotoUrl] = useState('')
-    const [photoWidth, setPhotoWidth] = useState('12%')
+    const [photoWidth, setPhotoWidth] = useState('10%')
 
     useEffect(() => {
         (async() => {

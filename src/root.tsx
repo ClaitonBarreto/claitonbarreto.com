@@ -28,7 +28,7 @@ const Root = (props:RootProps) => {
     return (
         <ThemeProvider theme={theme === Theme.light ? light : dark}>
             <GlobalStyle />
-            <ThemeSwitcher />
+            {/* <ThemeSwitcher /> */}
             <Component {...pageProps} />
         </ThemeProvider>
     )

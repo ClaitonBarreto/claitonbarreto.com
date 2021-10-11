@@ -10,6 +10,7 @@ import AboutText from 'src/components/AboutText'
 import Image from 'next/image'
 import NodeJsIcon from 'src/icons/nodejs.svg'
 import Card from 'src/components/Card'
+import Menu from 'src/infra/components/Menu'
 
 const App = styled.div`
   padding: 2rem;
@@ -48,7 +49,8 @@ const FrontEnd = () => {
 export default function About({ info }) {
     return (
         <App>  
-            <Head title="Home" />
+            <Head title="Minhas skills - Claiton Barreto" />
+            <Menu />
             <Flex 
                 direction="column"
                 justify="space-beetween"

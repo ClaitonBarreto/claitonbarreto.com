@@ -3,23 +3,22 @@ import styled from 'styled-components'
 import Head from '../src/infra/components/Head'
 import { Flex } from 'src/infra/styles/Container'
 import Profile from 'src/containers/Profile'
-import Card from 'src/components/Card'
-import SocialContainer from 'src/containers/Social'
 import HomePageCard from 'src/containers/HomePageCards'
 import { GetServerSideProps } from 'next'
 import client from 'src/apollo-client'
 import { gql } from '@apollo/client'
+import Menu from 'src/infra/components/Menu'
 
 const App = styled.div`
-  padding: 2rem;
+  padding: 4rem 2rem;
   height: 100vh;
 `
 
 export default function Home({posts}) {
-  console.log(posts)
   return (
     <App>
       <Head title="Home" />
+      <Menu />
       <Flex 
         direction="column"
         justify="space-beetween"
@@ -39,6 +38,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
           post {
               title
               slug
+              tags
           }
       }
   `})

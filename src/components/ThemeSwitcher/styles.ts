@@ -5,8 +5,7 @@ export const Switcher = styled.div`
     cursor: pointer;
     width: 3.5rem;
     height: 1.5rem;
-    position: absolute;
-    top: 1rem;
+    position: relative;
     left: 1rem;
     border-radius: 1rem;
     background-color: ${({theme}) => theme.negative};

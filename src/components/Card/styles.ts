@@ -5,7 +5,7 @@ export const CardContainer = styled.div`
     height: 160px;
     border: 1px solid ${({theme}) => theme.border};
     border-radius: 1.5rem;
-    padding: 2rem 0;
+    padding: 1.5rem;
     margin: 3rem 1.5rem;
     cursor: pointer;
     color: ${({theme}) => theme.text};
@@ -29,7 +29,6 @@ export const CardContainer = styled.div`
 export const CardTitle = styled.h3`
     font-weight: 300;
     text-align: left;
-    padding-left: 3rem;
     width: 100%;
     color: ${({theme}) => theme.text};
 
@@ -49,5 +48,19 @@ export const CardContent = styled.h4`
     text-align: center;
     margin-top: 1.5rem;
     padding-bottom: 2.5rem;
-    width: 70%
+    width: 70%;
+`
+
+export const CardTags = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3rem;
+    justify-content: center;
+    align-items: space-between;
+    width: 90%;
+    margin-top: 2rem;
+`
+
+export const CardTag = styled.span`
+
 `

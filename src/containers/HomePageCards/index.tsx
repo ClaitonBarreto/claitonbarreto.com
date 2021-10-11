@@ -27,6 +27,7 @@ const HomePageCard = ({posts}:IHomePageCard) => {
               key={post.id}
               title={post.title}
               link={`blog/${post.slug}`}
+              tags={post.tags}
             />
           ))}
         </FlexCard>

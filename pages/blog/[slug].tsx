@@ -13,6 +13,7 @@ import * as codeStyles from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import Card from 'src/components/Card'
 // import ReactMarkdown from 'react-markdown'
 import ReactMD from 'react-markdown';
+import Menu from 'src/infra/components/Menu'
 const ReactMarkdown = dynamic(() => import('react-markdown').then(mod => mod.default), { ssr: false }) as any;
 
 
@@ -118,7 +119,9 @@ export default function About({ post }) {
 
     return (
         <App>  
-            <Head title="Home" />
+            <Head title={`${post.title} - Claiton Barreto`} />
+            <Menu />
+            <Menu />
             <Flex 
                 direction="column"
                 justify="space-beetween"
