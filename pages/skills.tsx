@@ -3,12 +3,10 @@ import styled from 'styled-components'
 import Head from '../src/infra/components/Head'
 import { Flex } from 'src/infra/styles/Container'
 import Profile from 'src/containers/Profile'
-import { GetServerSideProps, GetStaticProps } from 'next'
+import { GetServerSideProps } from 'next'
 import client from 'src/apollo-client'
 import { gql } from '@apollo/client'
-import AboutText from 'src/components/AboutText'
 import Image from 'next/image'
-import NodeJsIcon from 'src/icons/nodejs.svg'
 import Card from 'src/components/Card'
 import Menu from 'src/infra/components/Menu'
 
@@ -17,34 +15,34 @@ const App = styled.div`
   height: 100vh;
 `
 
-const TechsWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-    gap: 2;
+// const TechsWrapper = styled.div`
+//     display: flex;
+//     flex-direction: row;
+//     width: 100%;
+//     justify-content: space-around;
+//     gap: 2;
 
-    img:hover {
-        filter: grayscale(0%);
-    }
+//     img:hover {
+//         filter: grayscale(0%);
+//     }
 
-    img {
-        filter: grayscale(100%);
-    }
-`
+//     img {
+//         filter: grayscale(100%);
+//     }
+// `
 
-const Icon = styled(Image)`
-    width: 10px;
-    border: 1px solid black;
-`
+// const Icon = styled(Image)`
+//     width: 10px;
+//     border: 1px solid black;
+// `
 
-const FrontEnd = () => {
-    return (
-        <h1>
-            Front-End
-        </h1>
-    )
-}
+// const FrontEnd = () => {
+//     return (
+//         <h1>
+//             Front-End
+//         </h1>
+//     )
+// }
 
 export default function About({ info }) {
     return (

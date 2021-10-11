@@ -2,17 +2,11 @@ import styled from 'styled-components'
 import dynamic from 'next/dynamic'
 import Head from 'src/infra/components/Head'
 import { Flex } from 'src/infra/styles/Container'
-import Profile from 'src/containers/Profile'
 import { GetServerSideProps } from 'next'
 import client from 'src/apollo-client'
 import { gql } from '@apollo/client'
-import Markdown from 'src/infra/components/Markdown'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import * as prismStyles from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import * as codeStyles from 'react-syntax-highlighter/dist/cjs/styles/hljs'
-import Card from 'src/components/Card'
-// import ReactMarkdown from 'react-markdown'
-import ReactMD from 'react-markdown';
 import Menu from 'src/infra/components/Menu'
 const ReactMarkdown = dynamic(() => import('react-markdown').then(mod => mod.default), { ssr: false }) as any;
 

@@ -1,12 +1,10 @@
 import styled from 'styled-components'
-import dynamic from 'next/dynamic'
 import Head from 'src/infra/components/Head'
 import { Flex } from 'src/infra/styles/Container'
 import Profile from 'src/containers/Profile'
 import { GetServerSideProps } from 'next'
 import client from 'src/apollo-client'
 import { gql } from '@apollo/client'
-import Markdown from 'src/infra/components/Markdown'
 import Card from 'src/components/Card'
 import Menu from 'src/infra/components/Menu'
 

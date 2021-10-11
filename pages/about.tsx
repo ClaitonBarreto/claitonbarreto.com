@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import dynamic from 'next/dynamic'
 import Head from 'src/infra/components/Head'
 import { Flex } from 'src/infra/styles/Container'
 import Profile from 'src/containers/Profile'
