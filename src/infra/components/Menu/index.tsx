@@ -10,15 +10,15 @@ const Menu = () => {
             <ThemeSwitcher />
             <MenuItemsWrapper>
                 <MenuItem 
-                    href="home"
+                    href="/"
                     label="Home"
                 />
                 <MenuItem 
-                    href="about"
+                    href="/about"
                     label="Sobre mim"
                 />
                 <MenuItem 
-                    href="blog"
+                    href="/blog"
                     label="Blog"
                 />
             </MenuItemsWrapper>
